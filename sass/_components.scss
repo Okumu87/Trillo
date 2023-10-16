@@ -6,8 +6,8 @@
 }
 //////////////////////// search
 .search {
-  background-color: orangered;
   flex: 0 0 40%;
+  display: flex;
   align-items: center;
   justify-content: center;
   &__input {
@@ -27,6 +27,15 @@
       width: 100%;
       background-color: var(--color-grey-light-3);
     }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
   }
 
   &__button {
@@ -45,12 +54,16 @@
   &__icon {
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-2);
   }
 }
 //////////////////////// user navigation
 
 .user-nav {
   background-color: lightgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__icon-box {
   }
 
